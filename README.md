@@ -51,7 +51,14 @@ Step 2.
 
 To train on CIFAR10, you can directly run train_cifar.py
 ```
-CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python ./train_cifar.py 
+CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python ./train_cifar.py \
+--data_dir /export/home/dataset/cifar10/ 
+```
+Or you can directly download the trained model introduced in "Model" section, and test it as follows:
+```
+CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python ./test_cifar.py \
+--data_dir /export/home/dataset/cifar10/ \
+--model_path /trained model
 ```
 
 To train on CIFAR100, You also need to train_cifar.py by using
@@ -63,12 +70,23 @@ CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python ./train_cifar.py \
         --cifar100 \
         --drop_path_prob 0.4
 ```
+Or you can directly download the trained model introduced in "Model" section, and test it as follows:
+```
+CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python ./test_cifar.py \
+--data_dir /export/home/dataset/cifar100/ \
+--model_path /trained model
+```
 
 To train on ImageNet, after you set the data path and GPU properly, you can directly run train_imagenet.py
 ```
 CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 python ./train_imagenet.py 
 ```
-
+Or you can directly download the trained model introduced in "Model" section, and test it as follows:
+```
+CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python ./test_imagenet.py \
+--data_dir /export/home/dataset/imagenet/ \
+--model_path /trained model
+```
 
 ### Models
 
@@ -81,13 +99,12 @@ Our trained selected models can be downloaded as following:
 <th valign="bottom">CIFAR100 top1 error</th>
 <th valign="bottom">ImageNet top1 error</th>
 <th valign="bottom">ImageNet top5 error</th>
-<th valign="bottom">model</th>
 <!-- TABLE BODY -->
 <tr><td align="left"><a href="https://arxiv.org/pdf/2006.16537.pdf">PR-DARTS v2</a></td>
-<td align="center">2.32 <a href="./PRDARTS_eval/pretrain_models/CIFAR10_model.pt">download</a></td>
-<td align="center">16.45 <a href="./PRDARTS_eval/pretrain_models/CIFAR100_model.pt">download</a></td>
-<td align="center">24.1 <a href="./PRDARTS_eval/pretrain_models/ImageNet_model2.pt">download</a></td>
-<td align="center">7.3 <a href="./PRDARTS_eval/pretrain_models/ImageNet_model2.pt">download</a></td>
+<td align="center">2.32 <a href="https://storage.googleapis.com/sfr-prdarts-research/PR-DARTS/CIFAR10_model.pt">download</a></td>
+<td align="center">16.45 <a href="https://storage.googleapis.com/sfr-prdarts-research/PR-DARTS/CIFAR100_model.pt">download</a></td>
+<td align="center">24.1 <a href="https://storage.googleapis.com/sfr-prdarts-research/PR-DARTS/ImageNet_model.pt">download</a></td>
+<td align="center">7.3 <a href="https://storage.googleapis.com/sfr-prdarts-research/PR-DARTS/ImageNet_model.pt">download</a></td>
 </tr>
 </tbody></table>
 

@@ -100,7 +100,7 @@ Our trained selected models can be downloaded as following:
 <th valign="bottom">ImageNet top1 error</th>
 <th valign="bottom">ImageNet top5 error</th>
 <!-- TABLE BODY -->
-<tr><td align="left"><a href="https://arxiv.org/pdf/2006.16537.pdf">PR-DARTS v2</a></td>
+<tr><td align="left"><a href="https://arxiv.org/pdf/2006.16537.pdf">PR-DARTS</a></td>
 <td align="center">2.32 <a href="https://storage.googleapis.com/sfr-prdarts-research/PR-DARTS/CIFAR10_model.pt">download</a></td>
 <td align="center">16.45 <a href="https://storage.googleapis.com/sfr-prdarts-research/PR-DARTS/CIFAR100_model.pt">download</a></td>
 <td align="center">24.1 <a href="https://storage.googleapis.com/sfr-prdarts-research/PR-DARTS/ImageNet_model.pt">download</a></td>
